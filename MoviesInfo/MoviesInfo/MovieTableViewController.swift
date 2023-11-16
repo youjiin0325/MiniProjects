@@ -9,8 +9,13 @@ import UIKit
 
 class MovieTableViewController: UITableViewController {
 
-    @IBOutlet var movieTitle: UILabel!
     @IBOutlet var tbListView: UITableView!
+    
+    //테이블 목록
+    var movieImages = [String]()
+    var moviewTitles = [String]()
+    var webAddresses = [String]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
