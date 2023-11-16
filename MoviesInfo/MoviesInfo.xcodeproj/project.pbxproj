@@ -62,13 +62,13 @@
 		206EFEA52B05FD84002DD7EB /* MoviesInfo */ = {
 			isa = PBXGroup;
 			children = (
-				206EFEBC2B060829002DD7EB /* MovieTableViewCell.swift */,
 				206EFEA62B05FD84002DD7EB /* AppDelegate.swift */,
 				206EFEA82B05FD84002DD7EB /* SceneDelegate.swift */,
 				206EFEAA2B05FD84002DD7EB /* ViewController.swift */,
 				206EFEAC2B05FD85002DD7EB /* Main.storyboard */,
 				206EFEC02B060B94002DD7EB /* MovieDetailViewController.swift */,
 				206EFEBA2B05FE7C002DD7EB /* MovieTableViewController.swift */,
+				206EFEBC2B060829002DD7EB /* MovieTableViewCell.swift */,
 				206EFEAF2B05FD8B002DD7EB /* Assets.xcassets */,
 				206EFEB12B05FD8B002DD7EB /* LaunchScreen.storyboard */,
 				206EFEB42B05FD8B002DD7EB /* Info.plist */,
