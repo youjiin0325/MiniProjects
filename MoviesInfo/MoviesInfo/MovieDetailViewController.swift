@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import WebKit
 
 class MovieDetailViewController: UIViewController {
 
-   //@IBOutlet var webView: WKWebView!
+    @IBOutlet var webView:WKWebView!
+    
+    //@IBOutlet var webView: WKWebView!
     
     var webSite: String?
     
@@ -18,10 +21,11 @@ class MovieDetailViewController: UIViewController {
 
         navigationItem.largeTitleDisplayMode = .never
         
-      
-        
-        
-    
+        if let address = webSite, let webURL = URL(string: address) {
+            let urlRequest = URLRequest(url: webURL)
+            webView.load(urlRequest)
+        }
+
     }
     
 

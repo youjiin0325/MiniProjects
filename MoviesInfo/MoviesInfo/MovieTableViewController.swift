@@ -43,11 +43,11 @@ class MovieTableViewController: UITableViewController ,
                        "이웃집 토토로",
                        "추억의 마니"]
         
-        movieImages = ["마녀 배달부 키키.jpeg",
-                       "마루 밑 아리에티.jpeg",
-                       "바람이 분다.jpeg",
-                       "이웃집 토토로.jpeg",
-                       "추억의 마니.jpeg"]
+        movieImages = ["1.jpeg",
+                       "2.jpeg",
+                       "3.jpeg",
+                       "4.jpeg",
+                       "5.jpeg"]
         
         webAddresses = ["https://ko.wikipedia.org/wiki/마녀_배달부_키키",
                         "https://ko.wikipedia.org/wiki/마루_밑_아리에티",
@@ -59,7 +59,7 @@ class MovieTableViewController: UITableViewController ,
         
         // 테이블 뷰의 예상 행 높이 설정
         // 테이블 보기 탐색을 추가할 때 행 높이가 축소되는 것을 방지하고, 테이블 렌더링 성능도 향상
-        self.tableView.estimatedRowHeight = 50
+       self.tableView.estimatedRowHeight = 50
         navigationController?.navigationBar.prefersLargeTitles = true
         
         
@@ -127,7 +127,7 @@ class MovieTableViewController: UITableViewController ,
     //*items 값을 셀에 추가
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 'AttractionTableCell' 부분은 스토리보드 화면에서 테이블 뷰 셀'Table View Cell' 의 Identifier 에 넣은 이름으로 채움
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShowMovieDetails", for: indexPath) as! MovieTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MoviesTableCell", for: indexPath) as! MovieTableViewCell
 
         //사용자가 현재 검색중인 matches 배열에 대한 인덱스 값에서 가져와야 함
         let row = indexPath.row
@@ -218,7 +218,17 @@ class MovieTableViewController: UITableViewController ,
         // Pass the selected object to the new view controller.
     }
     */
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // segue의 전환시 어느 화면으로 이동하는 건지 구분
+        if segue.identifier == "ShowMovieDetails" {
+            let detailView = segue.destination as! MovieDetailViewController
+            
+            //현재 테이블 뷰에 선택된 순서를 가져옴
+            let row = self.tableView.indexPathForSelectedRow!.row
+            detailView.webSite = searching ?  webAddresses[matchingItems[row]] : webAddresses[row]
+        }
+    }
     
 
     
