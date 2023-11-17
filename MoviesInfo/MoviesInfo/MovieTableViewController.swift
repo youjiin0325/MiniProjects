@@ -74,22 +74,39 @@ class MovieTableViewController: UITableViewController ,
         searchingContoller.obscuresBackgroundDuringPresentation = false
         
         
+        navigationItem.searchController = searchingContoller
+        definesPresentationContext = true
         
         
     }
      //* 검색결과 업데이트 , 검새창에 입력된 텍스트가 포한된 검색 컨트롤러 개체에 대한 참조가 전달됨.
     func updateSearchResults(for searchController: UISearchController) {
-        
+        if  let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            matchingItems.removeAll()
+            
+            for index in 0..<moviewTitles.count {
+                if moviewTitles[index].lowercased().contains(searchText.lowercased()) {
+                    matchingItems.append(index)
+                }
+            }
+            searching = true
+        }else {
+            searching = false
+        }
+        tableView.reloadData()
     }
     
-    //* 검색 취소 버튼 처피(검색적용)
+    //* 검색 취소 버튼 처리(검색적용)
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-     
+        //검색을 하지 않고 새로 데이터 리로드 하는 것
+        searching = false
+        tableView.reloadData()
     }
     
     
     //* 뷰가 보일때마다 리스트의 데이터 다시 불러오기
     override func viewWillAppear(_ animated: Bool) {
+        tbListView.reloadData()
         
     }
     
@@ -103,8 +120,8 @@ class MovieTableViewController: UITableViewController ,
     }
     //* 섹션별 행의 갯수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        //검색모드면 검색결과들만 보여주고 그게 아니라면 전체리스트 보여줌
+        return searching ? matchingItems.count : moviewTitles.count
     }
 
     //*items 값을 셀에 추가
@@ -113,7 +130,13 @@ class MovieTableViewController: UITableViewController ,
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShowMovieDetails", for: indexPath) as! MovieTableViewCell
 
         //사용자가 현재 검색중인 matches 배열에 대한 인덱스 값에서 가져와야 함
+        let row = indexPath.row
         
+        cell.movieTitle.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
+        cell.movieTitle.text = searching ? moviewTitles[matchingItems[row]] : moviewTitles[row]
+        
+        let imageName = searching ? movieImages[matchingItems[row]] : movieImages[row]
+        cell.movieImage.image = UIImage(named: imageName)
 
         return cell
     }
@@ -132,20 +155,51 @@ class MovieTableViewController: UITableViewController ,
     //목록 삭제
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-           
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            //삭제할 아이템 위치를 기록
+            let row = indexPath.row
+            if self.searching {
+                self.moviewTitles.remove(at: matchingItems[row])
+                self.movieImages.remove(at: matchingItems[row])
+                self.webAddresses.remove(at: matchingItems[row])
+                self.matchingItems.remove(at: row)
+                self.updateSearchResults(for: searchingContoller)
+            }else {
+                self.moviewTitles.remove(at: row)
+                self.movieImages.remove(at: row)
+                self.webAddresses.remove(at: row)
+            }
+            
         } else if editingStyle == .insert {
             
         }
     }
+    // Delete 를 한글로 변경
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "삭제"
+    }
 
 
-    /*
+
     // Override to support rearranging the table view.
+    // 목록 순서 바꾸기
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
+        //이동할 위치 기록
+        var row = fromIndexPath.row
+        
+        //이동할 아이템을 삭제
+        let movieTitle = self.moviewTitles.remove(at: row)
+        let movieImage = self.movieImages.remove(at: row)
+        let webAddress = self.webAddresses.remove(at: row)
+        
+        
+        //삭제될 아이템을 이동할 위치로 삽입
+        row = to.row
+        self.moviewTitles.insert(movieTitle, at: row)
+        self.movieImages.insert(movieImage, at: row)
+        self.webAddresses.insert(webAddress, at: row)
     }
-    */
+
 
     /*
     // Override to support conditional rearranging of the table view.
