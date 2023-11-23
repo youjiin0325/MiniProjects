@@ -7,26 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		209188332B0E2A77000558E3 /* caloriesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209188322B0E2A77000558E3 /* caloriesAppApp.swift */; };
-		209188352B0E2A77000558E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209188342B0E2A77000558E3 /* ContentView.swift */; };
-		209188372B0E2A7A000558E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209188362B0E2A7A000558E3 /* Assets.xcassets */; };
-		2091883A2B0E2A7A000558E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 209188392B0E2A7A000558E3 /* Preview Assets.xcassets */; };
-		2091883C2B0E2A7A000558E3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091883B2B0E2A7A000558E3 /* Persistence.swift */; };
-		2091883F2B0E2A7A000558E3 /* caloriesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2091883D2B0E2A7A000558E3 /* caloriesApp.xcdatamodeld */; };
+		2075B1592B0F4CCD0091DCED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2075B1582B0F4CCD0091DCED /* AppDelegate.swift */; };
+		2075B15B2B0F4CCD0091DCED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2075B15A2B0F4CCD0091DCED /* SceneDelegate.swift */; };
+		2075B15D2B0F4CCD0091DCED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2075B15C2B0F4CCD0091DCED /* ViewController.swift */; };
+		2075B1602B0F4CCD0091DCED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2075B15E2B0F4CCD0091DCED /* Main.storyboard */; };
+		2075B1632B0F4CCD0091DCED /* Data_Cycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2075B1612B0F4CCD0091DCED /* Data_Cycle.xcdatamodeld */; };
+		2075B1652B0F4CD00091DCED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2075B1642B0F4CD00091DCED /* Assets.xcassets */; };
+		2075B1682B0F4CD00091DCED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2075B1662B0F4CD00091DCED /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2091882F2B0E2A77000558E3 /* caloriesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = caloriesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		209188322B0E2A77000558E3 /* caloriesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caloriesAppApp.swift; sourceTree = "<group>"; };
-		209188342B0E2A77000558E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		209188362B0E2A7A000558E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		209188392B0E2A7A000558E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2091883B2B0E2A7A000558E3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		2091883E2B0E2A7A000558E3 /* caloriesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = caloriesApp.xcdatamodel; sourceTree = "<group>"; };
+		2075B1552B0F4CCC0091DCED /* Data_Cycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Data_Cycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2075B1582B0F4CCD0091DCED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2075B15A2B0F4CCD0091DCED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2075B15C2B0F4CCD0091DCED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2075B15F2B0F4CCD0091DCED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2075B1622B0F4CCD0091DCED /* Data_Cycle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data_Cycle.xcdatamodel; sourceTree = "<group>"; };
+		2075B1642B0F4CD00091DCED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2075B1672B0F4CD00091DCED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2075B1692B0F4CD00091DCED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2091882C2B0E2A77000558E3 /* Frameworks */ = {
+		2075B1522B0F4CCC0091DCED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,79 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		209188262B0E2A77000558E3 = {
+		2075B14C2B0F4CCC0091DCED = {
 			isa = PBXGroup;
 			children = (
-				209188312B0E2A77000558E3 /* caloriesApp */,
-				209188302B0E2A77000558E3 /* Products */,
+				2075B1572B0F4CCC0091DCED /* Data_Cycle */,
+				2075B1562B0F4CCC0091DCED /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		209188302B0E2A77000558E3 /* Products */ = {
+		2075B1562B0F4CCC0091DCED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2091882F2B0E2A77000558E3 /* caloriesApp.app */,
+				2075B1552B0F4CCC0091DCED /* Data_Cycle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		209188312B0E2A77000558E3 /* caloriesApp */ = {
+		2075B1572B0F4CCC0091DCED /* Data_Cycle */ = {
 			isa = PBXGroup;
 			children = (
-				209188322B0E2A77000558E3 /* caloriesAppApp.swift */,
-				209188342B0E2A77000558E3 /* ContentView.swift */,
-				209188362B0E2A7A000558E3 /* Assets.xcassets */,
-				2091883B2B0E2A7A000558E3 /* Persistence.swift */,
-				2091883D2B0E2A7A000558E3 /* caloriesApp.xcdatamodeld */,
-				209188382B0E2A7A000558E3 /* Preview Content */,
+				2075B1582B0F4CCD0091DCED /* AppDelegate.swift */,
+				2075B15A2B0F4CCD0091DCED /* SceneDelegate.swift */,
+				2075B15C2B0F4CCD0091DCED /* ViewController.swift */,
+				2075B15E2B0F4CCD0091DCED /* Main.storyboard */,
+				2075B1642B0F4CD00091DCED /* Assets.xcassets */,
+				2075B1662B0F4CD00091DCED /* LaunchScreen.storyboard */,
+				2075B1692B0F4CD00091DCED /* Info.plist */,
+				2075B1612B0F4CCD0091DCED /* Data_Cycle.xcdatamodeld */,
 			);
-			path = caloriesApp;
-			sourceTree = "<group>";
-		};
-		209188382B0E2A7A000558E3 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				209188392B0E2A7A000558E3 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = Data_Cycle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2091882E2B0E2A77000558E3 /* caloriesApp */ = {
+		2075B1542B0F4CCC0091DCED /* Data_Cycle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 209188422B0E2A7A000558E3 /* Build configuration list for PBXNativeTarget "caloriesApp" */;
+			buildConfigurationList = 2075B16C2B0F4CD00091DCED /* Build configuration list for PBXNativeTarget "Data_Cycle" */;
 			buildPhases = (
-				2091882B2B0E2A77000558E3 /* Sources */,
-				2091882C2B0E2A77000558E3 /* Frameworks */,
-				2091882D2B0E2A77000558E3 /* Resources */,
+				2075B1512B0F4CCC0091DCED /* Sources */,
+				2075B1522B0F4CCC0091DCED /* Frameworks */,
+				2075B1532B0F4CCC0091DCED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = caloriesApp;
-			productName = caloriesApp;
-			productReference = 2091882F2B0E2A77000558E3 /* caloriesApp.app */;
+			name = Data_Cycle;
+			productName = Data_Cycle;
+			productReference = 2075B1552B0F4CCC0091DCED /* Data_Cycle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		209188272B0E2A77000558E3 /* Project object */ = {
+		2075B14D2B0F4CCC0091DCED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					2091882E2B0E2A77000558E3 = {
+					2075B1542B0F4CCC0091DCED = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 2091882A2B0E2A77000558E3 /* Build configuration list for PBXProject "caloriesApp" */;
+			buildConfigurationList = 2075B1502B0F4CCC0091DCED /* Build configuration list for PBXProject "Data_Cycle" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,44 +113,64 @@
 				en,
 				Base,
 			);
-			mainGroup = 209188262B0E2A77000558E3;
-			productRefGroup = 209188302B0E2A77000558E3 /* Products */;
+			mainGroup = 2075B14C2B0F4CCC0091DCED;
+			productRefGroup = 2075B1562B0F4CCC0091DCED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2091882E2B0E2A77000558E3 /* caloriesApp */,
+				2075B1542B0F4CCC0091DCED /* Data_Cycle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2091882D2B0E2A77000558E3 /* Resources */ = {
+		2075B1532B0F4CCC0091DCED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2091883A2B0E2A7A000558E3 /* Preview Assets.xcassets in Resources */,
-				209188372B0E2A7A000558E3 /* Assets.xcassets in Resources */,
+				2075B1682B0F4CD00091DCED /* LaunchScreen.storyboard in Resources */,
+				2075B1652B0F4CD00091DCED /* Assets.xcassets in Resources */,
+				2075B1602B0F4CCD0091DCED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2091882B2B0E2A77000558E3 /* Sources */ = {
+		2075B1512B0F4CCC0091DCED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2091883C2B0E2A7A000558E3 /* Persistence.swift in Sources */,
-				209188352B0E2A77000558E3 /* ContentView.swift in Sources */,
-				209188332B0E2A77000558E3 /* caloriesAppApp.swift in Sources */,
-				2091883F2B0E2A7A000558E3 /* caloriesApp.xcdatamodeld in Sources */,
+				2075B1632B0F4CCD0091DCED /* Data_Cycle.xcdatamodeld in Sources */,
+				2075B15D2B0F4CCD0091DCED /* ViewController.swift in Sources */,
+				2075B1592B0F4CCD0091DCED /* AppDelegate.swift in Sources */,
+				2075B15B2B0F4CCD0091DCED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		2075B15E2B0F4CCD0091DCED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2075B15F2B0F4CCD0091DCED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2075B1662B0F4CD00091DCED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2075B1672B0F4CD00091DCED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		209188402B0E2A7A000558E3 /* Debug */ = {
+		2075B16A2B0F4CD00091DCED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,7 +233,7 @@
 			};
 			name = Debug;
 		};
-		209188412B0E2A7A000558E3 /* Release */ = {
+		2075B16B2B0F4CD00091DCED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -272,20 +289,19 @@
 			};
 			name = Release;
 		};
-		209188432B0E2A7A000558E3 /* Debug */ = {
+		2075B16D2B0F4CD00091DCED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"caloriesApp/Preview Content\"";
 				DEVELOPMENT_TEAM = BT45P2PUCQ;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Data_Cycle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosApp.caloriesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosApp.Data-Cycle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -301,20 +317,19 @@
 			};
 			name = Debug;
 		};
-		209188442B0E2A7A000558E3 /* Release */ = {
+		2075B16E2B0F4CD00091DCED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"caloriesApp/Preview Content\"";
 				DEVELOPMENT_TEAM = BT45P2PUCQ;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Data_Cycle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +337,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosApp.caloriesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosApp.Data-Cycle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -333,20 +348,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2091882A2B0E2A77000558E3 /* Build configuration list for PBXProject "caloriesApp" */ = {
+		2075B1502B0F4CCC0091DCED /* Build configuration list for PBXProject "Data_Cycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				209188402B0E2A7A000558E3 /* Debug */,
-				209188412B0E2A7A000558E3 /* Release */,
+				2075B16A2B0F4CD00091DCED /* Debug */,
+				2075B16B2B0F4CD00091DCED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		209188422B0E2A7A000558E3 /* Build configuration list for PBXNativeTarget "caloriesApp" */ = {
+		2075B16C2B0F4CD00091DCED /* Build configuration list for PBXNativeTarget "Data_Cycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				209188432B0E2A7A000558E3 /* Debug */,
-				209188442B0E2A7A000558E3 /* Release */,
+				2075B16D2B0F4CD00091DCED /* Debug */,
+				2075B16E2B0F4CD00091DCED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -354,17 +369,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2091883D2B0E2A7A000558E3 /* caloriesApp.xcdatamodeld */ = {
+		2075B1612B0F4CCD0091DCED /* Data_Cycle.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2091883E2B0E2A7A000558E3 /* caloriesApp.xcdatamodel */,
+				2075B1622B0F4CCD0091DCED /* Data_Cycle.xcdatamodel */,
 			);
-			currentVersion = 2091883E2B0E2A7A000558E3 /* caloriesApp.xcdatamodel */;
-			path = caloriesApp.xcdatamodeld;
+			currentVersion = 2075B1622B0F4CCD0091DCED /* Data_Cycle.xcdatamodel */;
+			path = Data_Cycle.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 209188272B0E2A77000558E3 /* Project object */;
+	rootObject = 2075B14D2B0F4CCC0091DCED /* Project object */;
 }
