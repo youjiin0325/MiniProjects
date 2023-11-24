@@ -41,6 +41,19 @@ class ViewController: UIViewController,
     }
     
     @IBAction func useCameraRoll(_ sender: Any) {
-    }
-}
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.savedPhotosAlbum) {
+                  
+                  let imagePicker = UIImagePickerController()
 
+                  imagePicker.delegate = self
+                  imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+                  imagePicker.mediaTypes = [UTType.image.identifier]
+                  imagePicker.allowsEditing = false
+
+                  self.present(imagePicker, animated: true, completion: nil)
+                  
+                  newMedia = false
+              }
+          }
+          
+      }
