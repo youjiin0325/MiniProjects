@@ -32,6 +32,11 @@
                                             <action selector="useCameraRoll:" destination="BYZ-38-t0r" id="Htj-pd-Cas"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Play Movie" id="nGo-aU-R11">
+                                        <connections>
+                                            <segue destination="c2i-Ji-9cu" kind="show" id="KEB-cy-BCr"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -54,6 +59,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="E55-gt-n9J">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="c2i-Ji-9cu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Qve-kO-UAn"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ybc-g4-Gn5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="-27"/>
         </scene>
     </scenes>
     <resources>

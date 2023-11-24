@@ -295,6 +295,8 @@
 				DEVELOPMENT_TEAM = BT45P2PUCQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CameraDemo_EX/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "이 앱을 사용하려면 사진을 찍어 사진 라이브러리에 저장할 수 있습니다.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "이 앱을 사진을 라이브러리에만 저장합니다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,6 +325,8 @@
 				DEVELOPMENT_TEAM = BT45P2PUCQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CameraDemo_EX/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "이 앱을 사용하려면 사진을 찍어 사진 라이브러리에 저장할 수 있습니다.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "이 앱을 사진을 라이브러리에만 저장합니다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
