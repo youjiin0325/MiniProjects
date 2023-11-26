@@ -8,16 +8,21 @@
 
 import UIKit
 import CoreData
+import MobileCoreServices//추가
+import UniformTypeIdentifiers//추가
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIImagePickerControllerDelegate,
+                      UINavigationControllerDelegate {
    
-    @IBOutlet var viewImage: UIImageView!
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var name: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var status: UILabel!
     
     // 관리 객체 컨텍스트 객체에 대한 참조를 저장할 변수를 선언
     var manageObjectContext: NSManagedObjectContext?
+    
+    var newMedia: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +39,65 @@ class ViewController: UIViewController {
                 self.manageObjectContext = container.viewContext
             }
         })
+    }
+    
+    
+    @IBAction func useCamera(_ sender: Any) {
+        //카메라 촬영을 하면?
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+            
+            let imagePicker = UIImagePickerController()
+
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            //무비버전 ["public.movie"] or [UTType.moview.identifier]
+            imagePicker.mediaTypes = [UTType.image.identifier]//어떤 이미지 사용? ["public.image"]-> 모든 이미지 사용
+            imagePicker.allowsEditing = false
+
+            self.present(imagePicker, animated: true, completion: nil)
+            newMedia = true
+        }
+    }
+    
+    
+    @IBAction func useCameraRoll(_ sender: Any) {
+        //카메라 촬영을 하면?
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.savedPhotosAlbum) {
+                  
+                  let imagePicker = UIImagePickerController()
+
+                  imagePicker.delegate = self
+                  imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+                  imagePicker.mediaTypes = [UTType.image.identifier]
+                  imagePicker.allowsEditing = false
+
+                  self.present(imagePicker, animated: true, completion: nil)
+                  
+                  newMedia = false
+              }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+            let mediaType = info[.mediaType] as! NSString
+
+            self.dismiss(animated: true, completion: nil)
+        
+           if mediaType.isEqual(to: UTType.image.identifier) {
+        
+           let image = info[.originalImage] as! UIImage
+            
+            imageView.image = image
+            
+            if newMedia == true {
+                UIImageWriteToSavedPhotosAlbum(image,self,nil,nil)
+                
+            }
+          }
+        }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func borrow(_ sender: Any) {
@@ -54,6 +118,22 @@ class ViewController: UIViewController {
             }
         }
     }
+    @objc func image(image: UIImage, didFinishSavingWithError error:NSErrorPointer, contextInfo: UnsafeRawPointer) {
+        
+        if error != nil {
+                    let alert = UIAlertController(title: "Save Failed",
+                                                  message: "Failed to save image",
+                                                  preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "OK",
+                                                     style: .cancel,
+                                                     handler: nil)
+                    alert.addAction(cancelAction)
+                    self.present(alert, animated: true, completion: nil)
+                }
+
+            }
+    
+    
     
     @IBAction func finding(_ sender: Any) {
         if let context = self.manageObjectContext, let entityDescription = NSEntityDescription.entity(forEntityName: "Cycle", in: context) {
@@ -121,4 +201,5 @@ class ViewController: UIViewController {
             
         }
     }
+    
 }
